@@ -1,7 +1,15 @@
 .header {
   position: sticky;
+  top: 0;
   display: flex;
-  margin-top: 2px;
+  /* margin-top: 2px; */
+  justify-content: space-evenly;
+  border-bottom: 0.1px solid lightgray;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
 }
 
 .header__left {
@@ -10,11 +18,14 @@
 }
 .header__right {
   display: flex;
+  /* margin-left: 40px; */
+  position: ;
 }
 .header__left img {
   height: 40px;
   object-fit: contain;
   margin-right: 4px;
+  align-items: center;
 }
 
 .header__search {

@@ -1,8 +1,12 @@
 import "./Header.css";
+import avatar from "../../avatar.jpg";
 import HeaderOption from "./HeaderOption";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import ChatIcon from "@mui/icons-material/Chat";
+import NotificationsIcon from "@mui/icons-material/Notifications";
 const Header = (props) => {
   return (
     <div className="header">
@@ -27,6 +31,13 @@ const Header = (props) => {
           Icon={SupervisorAccountIcon}
           title={`My Network`}
         ></HeaderOption>
+        <HeaderOption Icon={BusinessCenterIcon} title={`Jobs`}></HeaderOption>
+        <HeaderOption Icon={ChatIcon} title={`Messaging`}></HeaderOption>
+        <HeaderOption
+          Icon={NotificationsIcon}
+          title={`Notification`}
+        ></HeaderOption>
+        <HeaderOption avatar={avatar} title={`Me`}></HeaderOption>
       </div>
     </div>
   );
