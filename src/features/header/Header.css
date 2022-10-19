@@ -1,14 +1,20 @@
 .header {
   position: sticky;
+  display: flex;
+  margin-top: 2px;
 }
 
 .header__left {
+  display: flex;
+  margin-left: 2px;
+}
+.header__right {
   display: flex;
 }
 .header__left img {
   height: 40px;
   object-fit: contain;
-  margin-right: 10px;
+  margin-right: 4px;
 }
 
 .header__search {
@@ -16,7 +22,7 @@
   display: flex;
   align-items: center;
   border-radius: 5px;
-  height: 22px;
+  height: 20px;
   color: gray;
   background-color: #eef3f8;
 }

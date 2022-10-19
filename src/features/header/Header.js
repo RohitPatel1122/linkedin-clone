@@ -1,5 +1,8 @@
 import "./Header.css";
+import HeaderOption from "./HeaderOption";
 import SearchIcon from "@mui/icons-material/Search";
+import HomeIcon from "@mui/icons-material/Home";
+import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 const Header = (props) => {
   return (
     <div className="header">
@@ -18,7 +21,13 @@ const Header = (props) => {
           />
         </div>
       </div>
-      <div className="header__right"></div>
+      <div className="header__right">
+        <HeaderOption Icon={HomeIcon} title={`Home`}></HeaderOption>
+        <HeaderOption
+          Icon={SupervisorAccountIcon}
+          title={`My Network`}
+        ></HeaderOption>
+      </div>
     </div>
   );
 };
