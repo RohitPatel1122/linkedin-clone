@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./features/header/Header";
+import SideBar from "./features/sidebar/SideBar";
 
 function App() {
   return (
@@ -7,9 +8,12 @@ function App() {
       {/* Header */}
       <Header></Header>
       {/* App */}
-      {/* SIde Bar */}
-      {/* Feed */}
-      {/* Widgets */}
+      <div className="app__body">
+        <SideBar></SideBar>
+
+        {/* Feed */}
+        {/* Widgets */}
+      </div>
     </div>
   );
 }
