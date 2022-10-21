@@ -14,22 +14,10 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
 const auth = getAuth(app);
-
-// const saveDoc = () =>
-//   addDoc(collection(db, "users"), {
-//     first: "Ada",
-//     last: "Lovelace",
-//     born: 1815,
-//   }).then((docRef) => console.log("Document written with ID: ", docRef.id));
-//   console.log("Document written with ID: ", docRef.id);
-// } catch (e) {
-//   console.error("Error adding document: ", e);
-// }
 
 export { db, auth };

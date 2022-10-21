@@ -12,7 +12,11 @@ const Post = ({ name, description, message, photoUrl }) => {
   return (
     <div className="post">
       <div className="post__header">
-        <Avatar src={photoUrl} className="post__icon">
+        <Avatar
+          src={photoUrl}
+          imgProps={{ onError: console.log(`Failed to load img:${photoUrl} `) }}
+          className="post__icon"
+        >
           {name[0].toUpperCase()}
         </Avatar>
         <div className="post__info">
