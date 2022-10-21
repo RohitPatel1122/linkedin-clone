@@ -7,7 +7,6 @@ import {
   ShareOutlined,
   ThumbUpAlt,
 } from "@mui/icons-material";
-import { useSelector } from "react-redux";
 
 const Post = ({ name, description, message, photoUrl }) => {
   return (

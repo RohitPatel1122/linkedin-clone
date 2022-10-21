@@ -6,7 +6,7 @@ import Header from "./features/header/Header";
 import Login from "./features/login/Login";
 import SideBar from "./features/sidebar/SideBar";
 import { login, logout, selectUser } from "./features/userSlice";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./app/firebase";
 function App() {
   const user = useSelector(selectUser);
@@ -14,7 +14,6 @@ function App() {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        const uid = user.uid;
         dispatcher(
           login({
             email: user.email,
@@ -29,6 +28,7 @@ function App() {
         dispatcher(logout({}));
       }
     });
+    // eslint-disable-next-line
   }, []);
   return (
     <div className="app">

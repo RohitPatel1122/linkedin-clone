@@ -1,5 +1,4 @@
 import "./Feed.css";
-import avatar from "../../avatar.jpg";
 
 import CreateIcon from "@mui/icons-material/Create";
 import ImageIcon from "@mui/icons-material/Image";
@@ -13,14 +12,13 @@ import { useEffect, useState } from "react";
 
 import {
   collection,
-  doc,
   onSnapshot,
   addDoc,
   serverTimestamp,
   query,
   orderBy,
 } from "firebase/firestore";
-import { db, auth } from "../../app/firebase";
+import { db } from "../../app/firebase";
 import { useSelector } from "react-redux";
 import { selectUser } from "../userSlice";
 const Feed = () => {

@@ -1,5 +1,4 @@
 import "./Header.css";
-import avatar from "../../avatar.jpg";
 import HeaderOption from "./HeaderOption";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
