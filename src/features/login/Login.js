@@ -21,13 +21,13 @@ const Login = () => {
     }
     createUserWithEmailAndPassword(auth, email, password).then((userAuth) => {
       const user = userAuth.user;
-      console.log(`user created id:${user.uid}`);
+      console.log(`user created`);
       updateProfile(user, {
         displayName: name,
         photoURL: profilePicUrl,
       })
         .then(() => {
-          console.log(`user profile updated.${user}`);
+          console.log("user profile updated");
           dispatched(
             login({
               email: userAuth.user.email,
@@ -42,7 +42,6 @@ const Login = () => {
   };
   const loginUser = (e) => {
     e.preventDefault();
-    console.log("login ");
     signInWithEmailAndPassword(auth, email, password)
       .then((userAuth) => {
         // Signed in
@@ -56,7 +55,7 @@ const Login = () => {
         );
       })
       .catch((error) => {
-        console.log(error.code, error.message);
+        console.error(error.code, error.message);
       });
   };
   return (

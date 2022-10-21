@@ -21,7 +21,7 @@ const Header = (props) => {
       })
       .catch((error) => {
         // An error happened.
-        console.log(`{error}`);
+        console.error(`{error}`);
       });
   };
   return (

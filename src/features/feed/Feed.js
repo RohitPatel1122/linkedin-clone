@@ -37,7 +37,6 @@ const Feed = () => {
       snapShot.docs.forEach((doc) =>
         updatedPosts.push({ id: doc.id, data: doc.data() })
       );
-      console.log(updatedPosts);
       setPosts(updatedPosts);
     });
   }, []);
