@@ -1,4 +1,4 @@
-import { Avatar, Icon } from "@mui/material";
+import { Avatar } from "@mui/material";
 import "./HeaderOption.css";
 const HeaderOption = ({ avatar, title, Icon }) => {
   return (
