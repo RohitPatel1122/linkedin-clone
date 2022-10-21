@@ -1,5 +1,4 @@
 import "./Header.css";
-import avatar from "../../avatar.jpg";
 import HeaderOption from "./HeaderOption";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
@@ -7,7 +6,24 @@ import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import ChatIcon from "@mui/icons-material/Chat";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import { useDispatch } from "react-redux";
+import { logout } from "../userSlice";
+import { auth } from "../../app/firebase";
+import { signOut } from "firebase/auth";
+
 const Header = (props) => {
+  const dispatcher = useDispatch();
+  const logoutApp = () => {
+    dispatcher(logout());
+    signOut(auth)
+      .then(() => {
+        console.log(`Sign-out successful.`);
+      })
+      .catch((error) => {
+        // An error happened.
+        console.log(`{error}`);
+      });
+  };
   return (
     <div className="header">
       <div className="header__left">
@@ -19,6 +35,7 @@ const Header = (props) => {
           {/* search logo */}
           <SearchIcon></SearchIcon>
           <input
+            placeholder="Search"
             type="text"
             name="header__search__input"
             id="header__search__input"
@@ -37,7 +54,11 @@ const Header = (props) => {
           Icon={NotificationsIcon}
           title={`Notification`}
         ></HeaderOption>
-        <HeaderOption avatar={avatar} title={`Me`}></HeaderOption>
+        <HeaderOption
+          avatar={true}
+          title={`Me`}
+          onClick={logoutApp}
+        ></HeaderOption>
       </div>
     </div>
   );
