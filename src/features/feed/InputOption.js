@@ -1,5 +1,5 @@
-import "./FeedInputOption.css";
-const FeedInputOption = ({ Icon, title, color }) => {
+import "./InputOption.css";
+const InputOption = ({ Icon, title, color }) => {
   return (
     <div className="feed__inputOption">
       <Icon style={{ color: color }} />
@@ -7,4 +7,4 @@ const FeedInputOption = ({ Icon, title, color }) => {
     </div>
   );
 };
-export default FeedInputOption;
+export default InputOption;
