@@ -7,10 +7,11 @@ import {
   ShareOutlined,
   ThumbUpAlt,
 } from "@mui/icons-material";
+import { forwardRef } from "react";
 
-const Post = ({ name, description, message, photoUrl }) => {
+const Post = forwardRef(({ name, description, message, photoUrl }, ref) => {
   return (
-    <div className="post">
+    <div ref={ref} className="post">
       <div className="post__header">
         <Avatar
           src={photoUrl}
@@ -47,6 +48,6 @@ const Post = ({ name, description, message, photoUrl }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Post;
